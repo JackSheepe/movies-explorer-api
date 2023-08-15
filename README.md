@@ -14,6 +14,12 @@ https://github.com/JackSheepe/express-mesto-gha
 `npm run start` — запускает сервер  
 `npm run dev` — запускает сервер с hot-reload
 
+## Ссылки на проект
+
+IP-адрес 158.160.114.63
+
+Backend https://api.movies.puppies.nomoreparties.co/
+
 Использованные технологии
 
 - Node.js
@@ -21,3 +27,4 @@ https://github.com/JackSheepe/express-mesto-gha
 - MongoDB
 - mongoose
 - ESlint
+

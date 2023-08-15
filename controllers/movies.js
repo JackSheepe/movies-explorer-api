@@ -4,7 +4,7 @@ const { NotFoundErr } = require('../middlewares/NotFoundErr');
 const { ForbiddenErr } = require('../middlewares/ForbiddenErr');
 
 module.exports.getMyMovies = (req, res, next) => {
-  Movie.find({})
+  Movie.find({ owner: req.user._id })
     .then((movies) => res.send(movies))
     .catch(next);
 };
