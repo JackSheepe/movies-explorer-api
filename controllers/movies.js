@@ -51,7 +51,7 @@ module.exports.postMovie = (req, res, next) => {
 
 module.exports.deleteMovie = (req, res, next) => {
   const { movieId } = req.params;
-  Movie.findOne({ movieId })
+  Movie.findOne({ movieId: Number(movieId) })
     .then((movie) => {
       if (!movie) {
         throw new NotFoundErr("Фильм с указанным _id не найден");
@@ -59,7 +59,7 @@ module.exports.deleteMovie = (req, res, next) => {
       if (req.user._id.toString() !== movie.owner.toString()) {
         throw new ForbiddenErr("Недостаточно прав для выполнения операции");
       }
-      Movie.findOneAndDelete({ movieId })
+      Movie.findOneAndDelete({ movieId: Number(movieId) })
         .then(() => {
           res.send({ message: "Фильм удален из списка сохраненых" });
         })
