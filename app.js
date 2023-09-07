@@ -21,7 +21,7 @@ app.use(helmet());
 app.use(bodyParser.json());
 const { PORT = 3000 } = process.env;
 const corsOptions = {
-  origin: ['http://localhost:3001', 'https://mesto.pesto.nomoredomains.xyz'],
+  origin: ['http://localhost:3001', 'https://movies.puppies.nomoredomainsicu.ru'],
   optionsSuccessStatus: 200,
   credentials: true,
 };
